@@ -133,5 +133,5 @@ dmypy.json
 # IDE
 .vscode
 
-# CSV files
-*.csv
+# CSV files execpt test ones
+flaskr/**/*.csv
