@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACME S.A</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='styles/styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Reporte 3: Customer Ranking</h1>
+      <p>
+        Generar informe con el total de euros de los pedidos de los clientes
+        ordenados de mayor a menor
+      </p>
+      <form
+        action="/upload_report_3"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <label for="file"
+          >Debes adjuntar los siguientes ficheros:
+          <strong>orders.csv, products.csv</strong> y
+          <strong>customers.csv</strong></label
+        >
+        <input
+          class="btn btn-secondary"
+          type="file"
+          id="files"
+          name="files"
+          multiple
+        />
+        <br />
+        <div class="container">
+          <button class="btn btn-danger">Generar</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

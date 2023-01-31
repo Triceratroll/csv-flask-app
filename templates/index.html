@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+  <link rel="icon" type="image/svg+xml" href="/static/anvil.png" />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static',filename='styles/styles.css') }}"
+  />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACME S.A</title>
+</head>
+<html>
+  <body>
+    <div class="container">
+      <img src="../static/acme.png" width="300" alt="" />
+      <h1>Reporting Tool</h1>
+      <div>
+        <div class="flex">
+          <form action="/upload_report_1" method="get">
+            <input
+              class="btn btn-primary"
+              acttion="/upload_report_1"
+              type="submit"
+              value="Report 1"
+            />
+          </form>
+          <p>Generar informe con el total de euros de cada pedido</p>
+        </div>
+        <div class="flex">
+          <form action="/upload_report_2" method="get">
+            <input
+              class="btn btn-primary"
+              acttion="/upload_report_2"
+              type="submit"
+              value="Report 2"
+            />
+          </form>
+          <p>
+            Generar informe con lso distintos clientes que han comprado cada
+            producto
+          </p>
+        </div>
+        <div class="flex">
+          <form action="/upload_report_3" method="get">
+            <input
+              class="btn btn-primary"
+              acttion="/upload_report_3"
+              type="submit"
+              value="Report 3"
+            />
+          </form>
+          <p>
+            Generar informe con el total de euros de los pedidos de los clientes
+            ordenados de mayor a menor
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
