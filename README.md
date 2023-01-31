@@ -76,13 +76,23 @@ También podemos realizar de forma más sencilla, los pasos equivalentes desde D
 
 9. Ir a la dirección donde se encuentra la app http://127.0.0.1:5000/
 
-(Opcional) 10. En caso que hayamos hecho modificaciones y queramos construir una nueva imagen, en el directorio del dockerfile
+(Opcional) 10. En caso que hayamos hecho modificaciones y queramos construir una nueva imagen, en el directorio del Dockerfile
 
 ```bash
 $ docker build -t acme-app .
 ```
 
-(Opcional) 11. En caso que hayamos hecho modificaciones y queramos construir una nueva imagen
+(Opcional) 11. Nos logueamons en dockerhub
+
+```bash
+$ docker login
+```
+
+(Opcional) 12. Hacemos push de la imagen local al repositorio
+
+```bash
+$ docker push <docker_hub_username>/acme-app
+```
 
 ## Para ejecutar los tests
 
@@ -150,24 +160,22 @@ Además de los requisitos mínimos para la prueba, hemos definido una serie de r
 
 [Este vídeo de youtube](https://youtu.be/BP8ulGbu1fc) me ha resultado muy útil para saber cómo implemnetar una API que acepte ficheros .csv en las peticiones, cosa que no había hecho hasta ahora.
 
-[Este otro vídeo](https://www.youtube.com/watch?v=S7bwkys6D0E&ab_channel=Postman) de la docuemnatción de Postman de como utilizar para enviar ficheros en peticiones rest
+[Este otro vídeo](https://www.youtube.com/watch?v=S7bwkys6D0E&ab_channel=Postman) de la documentaciónmnatción de Postman de como utilizar para enviar ficheros en peticiones rest
 
 [Documentación de Bootstrap](https://getbootstrap.com/docs/4.0/components/buttons/)
 
-Estos dos aparatados de la documenatción de flask
+Estos dos aparatados de la documenatción de Flask
 sobre fileuploads y project layout
 
-https://flask.palletsprojects.com/en/2.2.x/patterns/fileuploads/
+- https://flask.palletsprojects.com/en/2.2.x/patterns/fileuploads/
 
-https://flask.palletsprojects.com/en/2.2.x/tutorial/layout/
+- https://flask.palletsprojects.com/en/2.2.x/tutorial/layout/
 
 muy útil también este apartado sobre testing en flask
 
-https://flask.palletsprojects.com/en/2.2.x/testing/
+- https://flask.palletsprojects.com/en/2.2.x/testing/
 
-La documentación de Pytest
-
-https://docs.pytest.org/en/7.1.x/how-to/usage.html
+[Documentación de Pytest](https://docs.pytest.org/en/7.1.x/how-to/usage.html)
 
 # Explicaciones adicionales
 
@@ -177,10 +185,7 @@ Lo que no tengo del todo claro es si el dockerfile debe estar en el nivel raíz 
 
 Algo que debo investigar más es como desplegar en modo producción la app de flask ya que a pesar de indicar modo production y el debug estar en off. Indican que se deberí ahacer uso de un servidor WSGI.
 
-> _Debug mode: off_
-> _WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead._
-
-En general el proyecto me ha parecido relativamente sencilo
+> _Debug mode: off_ > _WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead._
 
 # Herramientas que he utilizado y suelo utilizar
 
