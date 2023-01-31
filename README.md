@@ -106,7 +106,7 @@ $ pytest
 
 - Desarrolla una aplicación que utilizando como parámetros de entrada los tres ficheros suministrados customers.csv, products.csv y orders.csv genere los tres reportes solicitados.
 
-  > ✔️ He desarrollado una aplicación que genera cada uno de los reportes, a partir de suministrarle los distintos ficheros necesarios, para cada uno de los reportes. Estos fichero suminstrado tienen que llamarse exactamente como se indica en el enunciado, esto puede resultar tedioso, pero a su vez ayuda a que sepamos que fichero y con que columas le estamos suministrando al programa. Para que funcione correctamente hay qeu adjuntar a la vez los ficheros necesarios y depués hacer click en generar reporte. Acto seguido se descargará de forma automática el reporte en fomato .csv desde el navegador.
+  > ✔️ He desarrollado una aplicación que genera cada uno de los reportes, a partir de suministrarle los distintos ficheros necesarios, para cada uno de los reportes. Estos fichero suminstrado tienen que llamarse exactamente como se indica en el enunciado, esto puede resultar tedioso, pero a su vez ayuda a que sepamos que fichero y con que columas le estamos suministrando al programa. Para que funcione correctamente hay que adjuntar a la vez los ficheros necesarios y depués hacer click en generar reporte. Acto seguido se descargará de forma automática el reporte en fomato .csv desde el navegador.
 
 - No es necesario que construyas un frontend, es una prueba de backend. Es suficiente con tener un comando en consola que recoja la entrada y genere los archivos de salida.
 
