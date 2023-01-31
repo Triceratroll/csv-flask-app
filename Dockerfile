@@ -15,8 +15,7 @@ RUN apk add --no-cache --update build-base libffi-dev openssl-dev && \
 COPY . .
 
 # Set environment variables
-ENV FLASK_APP=app.py
-ENV FLASK_ENV=development
+ENV FLASK_APP=flaskr/app.py
 
 # Expose port 5000 for the Flask app to listen on
 EXPOSE 5000
