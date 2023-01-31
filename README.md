@@ -7,7 +7,7 @@ He optado por realizar una app con el siguiente **Stack**:
 1. **Python** : Para el manejo de datos, aunque sea desde .csv, creo que Python es una opción muy flexible
 2. **Flask** : Quería probar a utilizar Django, ya que creo que es una de las tecnologías principales que utilizais, pero me parecía "overkill" para este proyecto, mientras que Flask es ideal para este tipo de proyecto, así que he optado por él. Me ha servido consultar la documentación https://flask.palletsprojects.com/en/2.2.x/
 3. **Bootstrap y Custom CSS** : Para darle una apariencia decente a las templates de html de flask he optado por añadir Bootstrap y alguna clase de CSS
-4. **Pytest**: No lo había utilizado, al utilizar Python he decidido hacer uso y diseñar algunos tests. Me ha servido consultar la docuemntación https://docs.pytest.org/en/7.1.x/how-to/usage.html
+4. **Pytest**: No lo había utilizado, al utilizar Python he decidido hacer uso y diseñar algunos tests. Me ha servido consultar la documentación https://docs.pytest.org/en/7.1.x/how-to/usage.html
 
 # Ejecutar la solución
 
@@ -31,7 +31,9 @@ La aplicación entera esta dockerizada y se puede acceder desde https://hub.dock
    $ docker run -p 5000:5000 adrianmf06/acme-app
    ```
 
-4. Nos dirigimos a http://127.0.0.1:5000/
+4. Ir a la dirección donde se encuentra la app http://127.0.0.1:5000/
+
+También podemos realizar de forma más sencilla, los pasos equivalentes desde Docker desktop
 
 ## B) Clonando el repositorio a Local (Para desarrollar)
 
@@ -72,6 +74,16 @@ La aplicación entera esta dockerizada y se puede acceder desde https://hub.dock
    $ flask --debug run
    ```
 
+9. Ir a la dirección donde se encuentra la app http://127.0.0.1:5000/
+
+(Opcional) 10. En caso que hayamos hecho modificaciones y queramos construir una nueva imagen, en el directorio del dockerfile
+
+```bash
+$ docker build -t acme-app .
+```
+
+(Opcional) 11. En caso que hayamos hecho modificaciones y queramos construir una nueva imagen
+
 ## Para ejecutar los tests
 
 En el directorio raíz, ejecutar
@@ -84,11 +96,11 @@ $ pytest
 
 - Desarrolla una aplicación que utilizando como parámetros de entrada los tres ficheros suministrados customers.csv, products.csv y orders.csv genere los tres reportes solicitados.
 
-  > ✔️ He desarrollado una aplicación que genera cada uno de los reportes, a partir de suministrale los distintos ficheros necesarios para cada uno de los reportes. Estos fichero suminstrado tienen que llamarse exactamente como se indica en el enunciado, esto puede resultar tedioso, pero a su vez ayuda a que sepamos que fichero y con que columas le estamos suministrando al programa.
+  > ✔️ He desarrollado una aplicación que genera cada uno de los reportes, a partir de suministrarle los distintos ficheros necesarios, para cada uno de los reportes. Estos fichero suminstrado tienen que llamarse exactamente como se indica en el enunciado, esto puede resultar tedioso, pero a su vez ayuda a que sepamos que fichero y con que columas le estamos suministrando al programa.
 
 - No es necesario que construyas un frontend, es una prueba de backend. Es suficiente con tener un comando en consola que recoja la entrada y genere los archivos de salida.
 
-  > ✔️ Incialmente desarolle el código para generar los tres ficheros de salida a partir de los 3 ficheros de etrada con un único comando. Pero al pasar a desarollar un API consideré que era mejor separar en tres distintos la generación de cada reporte.
+  > ✔️ Incialmente desarolle el código para generar los 3 ficheros de salida a partir de los 3 ficheros de entrada con un único comando. Pero al pasar a desarollar un API consideré que era mejor separar la generación de cada reporte.
 
 - Decíamos en el primer apartado de la prueba que vamos a valorar como documentes la prueba, puedes crear un fichero readme.md con los pasos que tenemos que dar para ejecutar tu prueba en local.
 
@@ -100,7 +112,7 @@ Además de los requisitos mínimos para la prueba, hemos definido una serie de r
 
 - Testing. No es imprescindible, pero si vienes con nosotros vas a tener que aprender a testear tu código, puede ser un buen momento para empezar.
 
-  > 🟢 He realizado testing, he utilizado Pytest. En la raíz del proyecto hay una carpeta _tests_ que contiene la configuración necesaria y el archivo _test_index.py_ que define 4 casos de test. El primero para comprobar que se muestra correctamente la página de Inicio y después 3 casos más qeu cada uno testea uno de los endpoints que generan los reportes. Para poder testear la API y los métodos de los reportes, es necesario suministrar los ficheros _.csv_ por lo que en el carpeta _tests_ disponesmos también de una carpeta resources con los ficheros de ejemplo que utilizamos para testear los endpoints añadiendolos a las peticiones de testing. También comprobamos que al respuesta es correcta y que somo redirigidos al endpoint de descaga del reporte.
+  > 🟢 He realizado testing, he utilizado Pytest. En la raíz del proyecto hay una carpeta _tests_ que contiene la configuración necesaria y el archivo _test_index.py_ que define 4 casos de test. El primero para comprobar que se muestra correctamente la página de Inicio y después 3 casos más que cada uno testea uno de los endpoints que generan los reportes. Para poder testear la API y los métodos de los reportes, es necesario suministrar los ficheros _.csv_ por lo que en el carpeta _tests_ disponesmos también de una carpeta resources con los ficheros de ejemplo que utilizamos para testear los endpoints añadiendolos a las peticiones de testing. También comprobamos que al respuesta es correcta y que somo redirigidos al endpoint de descaga del reporte.
 
 - API. Implementar la aplicación como un API que permita subir los ficheros, generar los resultados y descargarlos.
 
@@ -136,7 +148,7 @@ Además de los requisitos mínimos para la prueba, hemos definido una serie de r
 
 # Recursos que he utilizado
 
-[Este vídeo de youtube](https://youtu.be/BP8ulGbu1fc) me ha resultado muy útil para saber cómo implemnetar una API que acepte ficheros .csv en las peticiones, cosa qeu no había hecho hasta ahora.
+[Este vídeo de youtube](https://youtu.be/BP8ulGbu1fc) me ha resultado muy útil para saber cómo implemnetar una API que acepte ficheros .csv en las peticiones, cosa que no había hecho hasta ahora.
 
 [Este otro vídeo](https://www.youtube.com/watch?v=S7bwkys6D0E&ab_channel=Postman) de la docuemnatción de Postman de como utilizar para enviar ficheros en peticiones rest
 
@@ -156,6 +168,19 @@ https://flask.palletsprojects.com/en/2.2.x/testing/
 La documentación de Pytest
 
 https://docs.pytest.org/en/7.1.x/how-to/usage.html
+
+# Explicaciones adicionales
+
+Lo que más me ha costado ha sido implentar y que funcionasen correctamente los tests, así como estructurar el proyecto adecuadamente.
+
+Lo que no tengo del todo claro es si el dockerfile debe estar en el nivel raíz de forma que cuando creamos la imagen, tanto tests como el readme, ficheros de configuración etc se añadan también. O si por el contrario sería más conveninete crear la imagen en el directorio flaskr para que contuviera únicamente la app.
+
+Algo que debo investigar más es como desplegar en modo producción la app de flask ya que a pesar de indicar modo production y el debug estar en off. Indican que se deberí ahacer uso de un servidor WSGI.
+
+> _Debug mode: off_
+> _WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead._
+
+En general el proyecto me ha parecido relativamente sencilo
 
 # Herramientas que he utilizado y suelo utilizar
 
