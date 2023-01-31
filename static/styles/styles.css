@@ -1,0 +1,18 @@
+h1 {
+  padding: 50px;
+}
+
+.flex {
+  display: flex;
+  padding: 50px;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  padding: 50px;
+}
+
+.btn {
+  margin-right: 50px;
+}
