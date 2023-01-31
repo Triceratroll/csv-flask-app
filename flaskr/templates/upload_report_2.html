@@ -4,6 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ACME S.A</title>
+    <link rel="icon" type="image/svg+xml" href="/static/anvil.png" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -18,17 +19,22 @@
   </head>
   <body>
     <div class="container">
-      <h1>Reporte 1: Order prices</h1>
-      <p>Generar informe con el total de euros de cada pedido</p>
+      <h1>Reporte 2: Product Customers</h1>
+      <p>
+        Generar informe con los distintos clientes que han comprado cada
+        producto
+      </p>
+
+      <p></p>
       <form
-        action="/upload_report_1"
+        action="/upload_report_2"
         method="POST"
         enctype="multipart/form-data"
       >
         <label for="file"
           >Debes adjuntar los siguientes ficheros:
-          <strong>orders.csv, products.csv</strong>
-        </label>
+          <strong>orders.csv</strong></label
+        >
         <input
           class="btn btn-secondary"
           type="file"
